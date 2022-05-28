@@ -67,11 +67,12 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .navigator-mobile {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
+  z-index: 5;
 }
 
 .navigator-mobile .nav-mobile {
@@ -81,6 +82,7 @@ input[type="search"]::-webkit-search-results-decoration {
   padding: 15px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  background-color: var(--white);
   box-shadow: 1px 1px 20px var(--grey-border);
 }
 

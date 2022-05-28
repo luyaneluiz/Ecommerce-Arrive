@@ -161,6 +161,171 @@ section.categories {
   font-size: 14px;
 }
 
+section.trends {
+  display: flex;
+  justify-content: center;
+}
+
+.trends h2 {
+  padding: 5px;
+}
+
+.news.hidden {
+  display: none;
+}
+
+.hots {
+  display: none;
+}
+
+.hots.hidden {
+  display: flex;
+  flex-direction: column;
+}
+
+section.trends .list-product {
+  width: 100%;
+  padding: 15px;
+  box-shadow: 0 2px 12px var(--grey-border);
+  border-radius: 15px;
+  display: flex;
+  margin: 15px 0;
+}
+
+.news,
+.hots {
+  margin: 0 30px;
+}
+
+.trends .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head span {
+  cursor: pointer;
+}
+
+.list-product .list-img {
+  width: 40%;
+  height: 75px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.list-img img {
+  height: 75px;
+}
+
+.list-product .product-content {
+  width: 60%;
+}
+
+h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.price h3 {
+  color: var(--color-destak);
+  padding-right: 6px;
+}
+
+.price del {
+  font-size: 13px;
+}
+
+.promo-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo-day .head {
+  padding: 10px 5px;
+  margin: 15px 25px;
+  border-bottom: 1px solid var(--grey-border);
+  width: 85%;
+}
+
+.promo-day .contain-promo {
+  border: 1px solid var(--grey-border);
+  border-radius: 15px;
+  background-color: var(--white);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.contain-promo img {
+  width: 100%;
+}
+
+.contain-promo p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.contain-promo button {
+  margin: 10px 0;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--color-destak);
+  color: var(--white);
+}
+
+.contain-promo .status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contain-promo .show-status {
+  width: 100%;
+  height: 8px;
+  background-color: var(--grey-border);
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.contain-promo .show-status:before {
+  position: absolute;
+  content: "";
+  top: 1.5px;
+  left: 3px;
+  height: 4px;
+  width: 60%;
+  background-color: var(--color-destak);
+  border-radius: 4px;
+}
+
+.counters {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.counter {
+  background-color: var(--grey-border);
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+}
+
 @media (min-width: 530px) {
   section.capa {
     display: flex;
@@ -195,12 +360,44 @@ section.categories {
   }
 
   .categories .item-category {
-    min-width: 50vw;
+    min-width: 48vw;
   }
 
   .item-category .box-item {
     width: 80%;
     padding: 15px;
+  }
+
+  .trends {
+    flex-direction: row;
+  }
+
+  section.trends .list-product {
+    width: 40vw;
+  }
+
+  .trends span {
+    display: none;
+  }
+
+  .news,
+  .hots {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+  }
+
+  .promo-day .contain-promo {
+    flex-direction: row;
+  }
+
+  .contain-promo img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .status-promo {
+    display: flex;
   }
 }
 
@@ -257,5 +454,58 @@ section.categories {
 
   .item-category .box-item {
     width: 90%;
+  }
+
+  .list-product .product-content {
+    width: 80%;
+  }
+
+  .list-product .list-img {
+    width: 20%;
+  }
+
+  @media (min-width: 1050px) {
+    .contain-capa {
+      width: 72vw;
+      padding: 20px 7% 0 8%;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .contain-capa button {
+      bottom: -30px;
+    }
+
+    .img-capa {
+      width: 300px;
+      height: 280px;
+      z-index: 3;
+    }
+
+    .categories .scroll-categories {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .categories .item-category {
+      min-width: 25vw;
+    }
+
+    .trends {
+      flex-direction: column;
+      max-width: 450px;
+      padding: 0 0 0 40px;
+    }
+
+    .news,
+    .hots {
+      border-right: 1px solid var(--grey-border);
+    }
+
+    section.trends .list-product {
+      width: 350px;
+    }
   }
 }
