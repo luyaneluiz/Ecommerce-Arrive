@@ -14,6 +14,10 @@
   --backround-offwhite: #f2f2f2;
   --background-btn: #e3c8de;
   --background-btn-hover: #f2e6f0;
+  --color-new: rgb(225, 225, 1);
+  --color-hot: rgb(189, 30, 30);
+  --color-promo: rgb(15, 171, 15);
+  --black-border: rgb(119, 119, 119);
 }
 
 body {
@@ -244,20 +248,22 @@ h4 {
   font-size: 13px;
 }
 
-.promo-day {
+.promo-day,
+.products {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.promo-day .head {
+.container .head {
   padding: 10px 5px;
   margin: 15px 25px;
   border-bottom: 1px solid var(--grey-border);
   width: 85%;
 }
 
-.promo-day .contain-promo {
+.contain-promo,
+.contain-product {
   border: 1px solid var(--grey-border);
   border-radius: 15px;
   background-color: var(--white);
@@ -269,6 +275,7 @@ h4 {
 
 .contain-promo img {
   width: 100%;
+  padding: 15px;
 }
 
 .contain-promo p {
@@ -324,6 +331,150 @@ h4 {
   text-align: center;
   border-radius: 10px;
   padding: 5px;
+}
+
+.container-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 90%;
+}
+
+.content-img {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.content-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.content-img span {
+  position: absolute;
+  left: 0;
+  color: var(--white);
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+span.new {
+  background-color: var(--color-new);
+}
+
+span.hot {
+  background-color: var(--color-hot);
+}
+
+span.promo {
+  background-color: var(--color-promo);
+}
+
+.content-img box-icon {
+  position: absolute;
+  right: 0;
+}
+
+.content-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-product button {
+  margin-top: 8px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--color-destak);
+  color: var(--white);
+}
+
+footer {
+  background-color: var(--grey-border);
+  margin-top: 30px;
+  padding: 30px;
+  font-size: 14px;
+}
+
+footer img {
+  width: 100px;
+}
+
+footer .redes {
+  display: flex;
+  margin: 15px 0 25px;
+}
+
+footer .terms,
+footer .popular {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  margin: 3px 0;
+}
+
+footer a:hover {
+  color: var(--color-destak);
+}
+
+.subscribe {
+  padding: 5px 0;
+}
+
+.subscribe input {
+  padding: 5px 10px;
+  border: var(--black-border) 1px solid;
+  outline: none;
+  border-radius: 2px;
+  width: 65%;
+}
+
+.subscribe button {
+  background-color: var(--color-destak);
+  border-radius: 2px;
+  padding: 5px 15px;
+  border: none;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.atendimento {
+  margin-top: 25px;
+}
+
+.atendimento li {
+  border-bottom: 1px rgba(173, 165, 165, 0.773) solid;
+  padding: 8px 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  border-top: 1px solid rgba(173, 165, 165, 0.773);
+  background-color: var(--white);
+  padding: 30px 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer img {
+  width: 70%;
 }
 
 @media (min-width: 530px) {
@@ -392,12 +543,31 @@ h4 {
   }
 
   .contain-promo img {
-    width: 200px;
-    height: 200px;
+    width: 40%;
+    height: 20%;
   }
 
   .status-promo {
     display: flex;
+  }
+
+  .container-products {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .contain-product {
+    width: 250px;
+  }
+
+  .content-img {
+    height: 250px;
+  }
+
+  .footer img {
+    width: 300px;
   }
 }
 
@@ -464,7 +634,20 @@ h4 {
     width: 20%;
   }
 
-  @media (min-width: 1050px) {
+  .container-products {
+    justify-content: center;
+  }
+
+  .contain-product {
+    width: 225px;
+  }
+
+  .content-img {
+    height: 225px;
+  }
+}
+
+@media (min-width: 1050px) {
     .contain-capa {
       width: 72vw;
       padding: 20px 7% 0 8%;
@@ -493,19 +676,41 @@ h4 {
       min-width: 25vw;
     }
 
+    section.main {
+      display: flex;
+      align-items: flex-start;
+    }
+
     .trends {
       flex-direction: column;
       max-width: 450px;
       padding: 0 0 0 40px;
-    }
-
-    .news,
-    .hots {
       border-right: 1px solid var(--grey-border);
     }
 
     section.trends .list-product {
       width: 350px;
+    }
+
+    .contain-promo img {
+      width: 50%;
+      height: 90%;
+      padding: 0 30px 0 0;
+    }
+
+    .promo-day .head,
+    .promo-day .contain-promo {
+      width: 90%;
+    }
+
+    .content-promo {
+      font-size: 1.5em;
+    }
+
+    .counter {
+      height: 60px;
+      width: 60px;
+      font-size: 20px;
     }
   }
 }
