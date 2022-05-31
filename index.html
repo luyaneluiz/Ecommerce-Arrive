@@ -20,6 +20,7 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="./scripts/menuMobile.js" defer></script>
     <script src="./scripts/trends.js" defer></script>
     <script src="./scripts/counts.js" defer></script>
     <script src="./scripts/favoritar.js" defer></script>
@@ -49,15 +50,19 @@
       </div>
 
       <ul class="navigator-desktop">
+        <div class="btn-mobile"></div>
         <li>
           <a href="">HOME</a>
         </li>
         <li class="categories">
-          <a href="">CATEGORIES</a>
+          <a onclick="moreCategories()" class="more-categories">
+            CATEGORIES
+            <box-icon class="btn-more-categories"></box-icon>
+          </a>
           <div class="menu-drop">
             <div class="drop">
               <ul>
-                <li><strong>Women's</strong></li>
+                <li class="cat"><strong>Women's</strong></li>
                 <li>Formal</li>
                 <li>Casual</li>
                 <li>Sports</li>
@@ -65,7 +70,7 @@
                 <li>Perfum</li>
               </ul>
               <ul>
-                <li><strong>Men's</strong></li>
+                <li class="cat"><strong>Men's</strong></li>
                 <li>Formal</li>
                 <li>Casual</li>
                 <li>Sports</li>
@@ -73,7 +78,7 @@
                 <li>Perfum</li>
               </ul>
               <ul>
-                <li><strong>Accessories</strong></li>
+                <li class="cat"><strong>Accessories</strong></li>
                 <li>Bags</li>
                 <li>Belt</li>
                 <li>Jewelry</li>
@@ -81,7 +86,7 @@
                 <li>Cap</li>
               </ul>
               <ul>
-                <li><strong>Beach</strong></li>
+                <li class="cat"><strong>Beach</strong></li>
                 <li>Bikini</li>
                 <li>Sarong</li>
                 <li>Speedo</li>
@@ -107,7 +112,7 @@
 
       <div class="navigator-mobile">
         <nav class="nav-mobile">
-          <box-icon name="menu" color="#171616"></box-icon>
+          <box-icon name="menu" onclick="menuMobileOn()" color="#171616"></box-icon>
           <box-icon name="shopping-bag" color="#171616"></box-icon>
           <box-icon name="home-alt-2" color="#171616"></box-icon>
           <box-icon name="heart" color="#171616"></box-icon>

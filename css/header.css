@@ -2,6 +2,11 @@ header {
   background-color: var(--white);
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .contain-head {
   display: flex;
   justify-content: space-between;
@@ -45,13 +50,6 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 6px;
 }
 
-.navigator-desktop a {
-  text-decoration: none;
-  color: black;
-  padding-bottom: 10px;
-  transition: all 0.3s ease;
-}
-
 .navigator-desktop {
   display: none;
 }
@@ -59,11 +57,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .navigator-desktop li {
   list-style: none;
   margin: 10px 15px;
-}
-
-.navigator-desktop a:hover {
-  color: var(--color-hover);
-  border-bottom: 2px solid var(--color-hover);
 }
 
 .navigator-mobile {
@@ -110,13 +103,63 @@ input[type="search"]::-webkit-search-results-decoration {
   padding: 10px 25px;
 }
 
-.categories:hover .menu-drop {
+.navigator-desktop.active {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 8px;
+  height: 100%;
+  border: 1px solid var(--grey-border);
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  padding: 15px;
+  background-color: var(--white);
+}
+
+.navigator-desktop.active .btn-mobile {
+  display: flex;
+  justify-content: end;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--grey-border);
+}
+
+.navigator-desktop.active a {
+  font-weight: 600;
+}
+
+.more-categories {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.menu-drop.active {
   visibility: visible;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.menu-drop.active .drop {
+  flex-direction: column;
+  box-shadow: none;
+  justify-content: flex-start;
+}
+
+.menu-drop.active ul {
+  padding: 0;
 }
 
 @media (min-width: 600px) {
   .navigator-mobile .nav-mobile {
     display: none;
+  }
+
+  .categories:hover .menu-drop {
+    visibility: visible;
   }
 
   .nav-desktop {
@@ -128,5 +171,10 @@ input[type="search"]::-webkit-search-results-decoration {
     display: flex;
     justify-content: center;
     padding: 15px;
+  }
+
+  .navigator-desktop a {
+    padding-bottom: 10px;
+    transition: all 0.3s ease;
   }
 }
