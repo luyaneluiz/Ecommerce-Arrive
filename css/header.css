@@ -141,16 +141,28 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   justify-content: flex-start;
   width: 100%;
+  margin: 0;
 }
 
 .menu-drop.active .drop {
   flex-direction: column;
   box-shadow: none;
   justify-content: flex-start;
+  width: 100%;
 }
 
 .menu-drop.active ul {
   padding: 0;
+}
+
+.menu-drop.active .cat {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 5px 15px;
+}
+
+.menu-drop.active li {
+  display: none;
 }
 
 @media (min-width: 600px) {
@@ -176,5 +188,17 @@ input[type="search"]::-webkit-search-results-decoration {
   .navigator-desktop a {
     padding-bottom: 10px;
     transition: all 0.3s ease;
+  }
+
+  .btn-more-categories {
+    display: none;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  .cat {
+    font-weight: bold;
   }
 }

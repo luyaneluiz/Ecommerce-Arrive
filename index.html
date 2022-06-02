@@ -21,9 +21,9 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
     <script src="./scripts/menuMobile.js" defer></script>
-    <script src="./scripts/trends.js" defer></script>
-    <script src="./scripts/counts.js" defer></script>
-    <script src="./scripts/favoritar.js" defer></script>
+    <!-- <script src="./scripts/trends.js" defer></script> -->
+    <!-- <script src="./scripts/counts.js" defer></script> -->
+    <!-- <script src="./scripts/favoritar.js" defer></script> -->
 
     <title>Arrive - La meilleure boutique femme</title>
   </head>
@@ -50,19 +50,21 @@
       </div>
 
       <ul class="navigator-desktop">
-        <div class="btn-mobile"></div>
+        <div class="btn-mobile">
+          <box-icon class="close-btn"></box-icon>
+        </div>
         <li>
           <a href="">HOME</a>
         </li>
         <li class="categories">
-          <a onclick="moreCategories()" class="more-categories">
+          <a class="more-categories">
             CATEGORIES
             <box-icon class="btn-more-categories"></box-icon>
           </a>
           <div class="menu-drop">
             <div class="drop">
               <ul>
-                <li class="cat"><strong>Women's</strong></li>
+                <li class="cat">Women's</li>
                 <li>Formal</li>
                 <li>Casual</li>
                 <li>Sports</li>
@@ -70,7 +72,7 @@
                 <li>Perfum</li>
               </ul>
               <ul>
-                <li class="cat"><strong>Men's</strong></li>
+                <li class="cat">Men's</li>
                 <li>Formal</li>
                 <li>Casual</li>
                 <li>Sports</li>
@@ -78,7 +80,7 @@
                 <li>Perfum</li>
               </ul>
               <ul>
-                <li class="cat"><strong>Accessories</strong></li>
+                <li class="cat">Accessories</li>
                 <li>Bags</li>
                 <li>Belt</li>
                 <li>Jewelry</li>
@@ -86,7 +88,7 @@
                 <li>Cap</li>
               </ul>
               <ul>
-                <li class="cat"><strong>Beach</strong></li>
+                <li class="cat">Beach</li>
                 <li>Bikini</li>
                 <li>Sarong</li>
                 <li>Speedo</li>
