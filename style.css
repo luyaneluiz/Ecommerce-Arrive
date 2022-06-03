@@ -222,6 +222,8 @@ section.trends .list-product {
 
 .list-img img {
   height: 75px;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 .list-product .product-content {
@@ -276,6 +278,8 @@ h4 {
 .contain-promo img {
   width: 100%;
   padding: 15px;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 .contain-promo p {
@@ -353,6 +357,16 @@ h4 {
 .content-img img {
   height: 100%;
   width: 100%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.content-img img:hover,
+.trends img:hover,
+.contain-promo img:hover {
+  -moz-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
 }
 
 .content-img span {
@@ -465,7 +479,6 @@ footer a:hover {
 }
 
 .footer {
-  border-top: 1px solid rgba(173, 165, 165, 0.773);
   background-color: var(--white);
   padding: 30px 0 50px;
   display: flex;
@@ -640,6 +653,7 @@ footer a:hover {
 
   .contain-product {
     width: 225px;
+    max-height: 385px;
   }
 
   .content-img {
