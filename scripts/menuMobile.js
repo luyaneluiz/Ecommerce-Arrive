@@ -6,24 +6,24 @@ const categories = document.querySelector(".categories");
 function menuMobileOn() {
   navigator.classList.toggle("active");
   btnMoreCategories.setAttribute("name", "plus");
-  // dropCategories.classList.remove("active");
-
-  categories.addEventListener("click", moreCategories());
+  dropCategories.classList.remove("active");
 
   closeButton();
 }
 
 function moreCategories() {
-  // dropCategories.classList.toggle("active");
-  // btnMoreCategories.setAttribute("name", "minus");
+  const widthScreen = window.outerWidth;
 
-  // if (dropCategories.classList.contains("active")) {
-  //   btnMoreCategories.setAttribute("name", "minus");
-  // } else {
-  //   btnMoreCategories.setAttribute("name", "plus");
-  // }
+  if (widthScreen <= 600) {
+    dropCategories.classList.toggle("active");
+    btnMoreCategories.setAttribute("name", "minus");
 
-  console.log("funfou");
+    if (dropCategories.classList.contains("active")) {
+      btnMoreCategories.setAttribute("name", "minus");
+    } else {
+      btnMoreCategories.setAttribute("name", "plus");
+    }
+  }
 }
 
 function closeButton() {
@@ -35,6 +35,4 @@ function closeButton() {
   function closeMenu() {
     navigator.classList.remove("active");
   }
-
-  // dropCategories.classList.remove("active");
 }
