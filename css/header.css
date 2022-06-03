@@ -189,6 +189,10 @@ input[type="search"]::-webkit-search-results-decoration {
     transition: all 0.3s ease;
   }
 
+  .navigator-desktop a:hover {
+    color: var(--color-destak);
+  }
+
   .btn-more-categories {
     display: none;
   }

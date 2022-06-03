@@ -1,12 +1,20 @@
-function favoritarOn(e) {
-  e.setAttribute("type", "solid");
-}
+// function Favoritar(e) {
+//   e.classList.toggle("favoritado");
 
-function favoritarOff(e) {
-  e.setAttribute("type", "");
-  e.setAttribute("name", "heart");
-}
+//   if (e.classList.contains("favoritado")) {
+//     e.setAttribute("src", "./assets/ico-heart-solid.svg");
+//   } else {
+//     e.setAttribute("src", "./assets/ico-heart.svg");
+//   }
+// }
 
-function favoritarTrue(e) {
-  e.setAttribute("type", "solid");
+function Favoritar(e) {
+  e.classList.toggle("favoritado");
+
+  if (e.classList.contains("favoritado")) {
+    e.setAttribute("type", "solid");
+  } else {
+    e.setAttribute("type", "");
+    e.setAttribute("name", "heart");
+  }
 }

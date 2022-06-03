@@ -394,6 +394,15 @@ span.promo {
 .content-img box-icon {
   position: absolute;
   right: 0;
+  cursor: pointer;
+  z-index: 6;
+  transition: all 0.5s ease;
+}
+
+.content-img box-icon:hover {
+  -moz-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
 }
 
 .content-product {
