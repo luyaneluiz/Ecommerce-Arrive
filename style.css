@@ -18,6 +18,7 @@
   --color-hot: rgb(189, 30, 30);
   --color-promo: rgb(15, 171, 15);
   --black-border: rgb(119, 119, 119);
+  --color-black: rgb(0, 0, 0);
 }
 
 body {
