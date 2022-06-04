@@ -1,7 +1,8 @@
-const navigator = document.querySelector(".navigator-desktop");
+const navigator = document.querySelector(".header__desktop");
 const btnMoreCategories = document.querySelector(".btn-more-categories");
-const dropCategories = document.querySelector(".menu-drop");
-const categories = document.querySelector(".categories");
+const dropCategories = document.querySelector(".header__menu-drop");
+const categories = document.querySelector(".header__categories");
+const widthScreen = window.outerWidth;
 
 function menuMobileOn() {
   navigator.classList.toggle("active");
@@ -12,8 +13,6 @@ function menuMobileOn() {
 }
 
 function moreCategories() {
-  const widthScreen = window.outerWidth;
-
   if (widthScreen <= 600) {
     dropCategories.classList.toggle("active");
     btnMoreCategories.setAttribute("name", "minus");
@@ -35,4 +34,8 @@ function closeButton() {
   function closeMenu() {
     navigator.classList.remove("active");
   }
+}
+
+if (widthScreen > 599) {
+  btnMoreCategories.style.display = "none";
 }

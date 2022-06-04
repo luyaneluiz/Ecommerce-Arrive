@@ -30,13 +30,15 @@
 
   <body>
     <header>
-      <div class="contain-head">
+      <div class="header__contain">
         <img src="./assets/logo.png" alt="logo arrive" width="100px" />
-        <div class="search">
+
+        <div class="header__search">
           <input type="search" placeholder="Procure um produto..." />
           <box-icon name="search" color="#171616"></box-icon>
         </div>
-        <nav class="nav-desktop">
+
+        <nav class="header__buttons">
           <a href="">
             <box-icon name="user" color="#171616"></box-icon>
           </a>
@@ -44,52 +46,56 @@
           <a href="">
             <box-icon name="heart" color="#171616"></box-icon>
           </a>
+
           <a href="">
             <box-icon name="shopping-bag" color="#171616"></box-icon>
           </a>
         </nav>
       </div>
 
-      <ul class="navigator-desktop">
-        <div class="btn-mobile">
+      <ul class="header__desktop">
+        <div class="header__navmobile">
           <box-icon class="close-btn"></box-icon>
         </div>
-        <li>
-          <a href="">HOME</a>
-        </li>
-        <li class="categories">
-          <a class="more-categories" onclick="moreCategories()">
+
+        <li><a href="">HOME</a></li>
+
+        <li class="header__categories">
+          <a class="header__more-categories" onclick="moreCategories()">
             CATEGORIES
             <box-icon class="btn-more-categories"></box-icon>
           </a>
-          <div class="menu-drop">
-            <div class="drop">
+          <div class="header__menu-drop">
+            <div class="header__drop">
               <ul>
-                <li class="cat">Women's</li>
+                <li class="header__cat">Women's</li>
                 <li>Formal</li>
                 <li>Casual</li>
                 <li>Sports</li>
                 <li>Jacket</li>
                 <li>Perfum</li>
               </ul>
+
               <ul>
-                <li class="cat">Men's</li>
+                <li class="header__cat">Men's</li>
                 <li>Formal</li>
                 <li>Casual</li>
                 <li>Sports</li>
                 <li>Jacket</li>
                 <li>Perfum</li>
               </ul>
+
               <ul>
-                <li class="cat">Accessories</li>
+                <li class="header__cat">Accessories</li>
                 <li>Bags</li>
                 <li>Belt</li>
                 <li>Jewelry</li>
                 <li>Cosmetics</li>
                 <li>Cap</li>
               </ul>
+
               <ul>
-                <li class="cat">Beach</li>
+                <li class="header__cat">Beach</li>
                 <li>Bikini</li>
                 <li>Sarong</li>
                 <li>Speedo</li>
@@ -99,31 +105,20 @@
             </div>
           </div>
         </li>
-        <li>
-          <a href="">NEWS</a>
-        </li>
-        <li>
-          <a href="">TRENDS</a>
-        </li>
-        <li>
-          <a href="">TOPS</a>
-        </li>
-        <li>
-          <a href="">OFFERS</a>
-        </li>
+
+        <li><a href="">NEWS</a></li>
+        <li><a href="">TRENDS</a></li>
+        <li><a href="">TOPS</a></li>
+        <li><a href="">OFFERS</a></li>
       </ul>
 
-      <div class="navigator-mobile">
-        <nav class="nav-mobile">
-          <box-icon
-            name="menu"
-            onclick="menuMobileOn()"
-            color="#171616"
-          ></box-icon>
-          <box-icon name="shopping-bag" color="#171616"></box-icon>
-          <box-icon name="home-alt-2" color="#171616"></box-icon>
-          <box-icon name="heart" color="#171616"></box-icon>
-          <box-icon name="user" color="#171616"></box-icon>
+      <div class="header__mobile">
+        <nav class="header__nav-mobile">
+          <box-icon name="menu" onclick="menuMobileOn()"></box-icon>
+          <box-icon name="shopping-bag"></box-icon>
+          <box-icon name="home-alt-2"></box-icon>
+          <box-icon name="heart"></box-icon>
+          <box-icon name="user"></box-icon>
         </nav>
       </div>
     </header>
