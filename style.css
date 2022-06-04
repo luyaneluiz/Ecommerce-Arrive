@@ -12,8 +12,8 @@
   --color-title: #44312b;
   --color-destak: #c45389;
   --backround-offwhite: #f2f2f2;
-  --background-btn: #e3c8de;
-  --background-btn-hover: #f2e6f0;
+  --background-btn: #de76ac;
+  --background-btn-hover: #e98dc5;
   --color-new: rgb(225, 225, 1);
   --color-hot: rgb(189, 30, 30);
   --color-promo: rgb(15, 171, 15);
@@ -86,9 +86,9 @@ section.capa {
   bottom: -10px;
   background-color: var(--background-btn);
   border-radius: 5px;
-  border: 1px solid var(--grey-border);
+  border: none;
   box-shadow: 0 1px 12px var(--grey-border);
-  color: var(--color-title);
+  color: var(--white);
   font-weight: 600;
   font-size: 12px;
   cursor: pointer;
@@ -295,6 +295,14 @@ h4 {
   border: none;
   background-color: var(--color-destak);
   color: var(--white);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.contain-promo button:hover,
+.content-product button:hover,
+.subscribe button:hover {
+  background-color: var(--background-btn);
 }
 
 .contain-promo .status {
@@ -419,6 +427,8 @@ span.promo {
   border: none;
   background-color: var(--color-destak);
   color: var(--white);
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 footer {
@@ -473,6 +483,8 @@ footer a:hover {
   border: none;
   color: var(--white);
   font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .atendimento {
