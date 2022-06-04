@@ -2,12 +2,6 @@ header {
   background-color: var(--white);
 }
 
-a {
-  text-decoration: none;
-  color: var(--color-black);
-  cursor: pointer;
-}
-
 .header__contain {
   display: flex;
   justify-content: space-between;
@@ -194,15 +188,8 @@ input[type="search"]::-webkit-search-results-decoration {
   .header__desktop {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 15px 15px 0px;
-  }
-
-  .header__desktop a {
-    transition: all 0.3s ease;
-  }
-
-  .header__desktop a:hover {
-    color: var(--color-destak);
   }
 
   .header__cat {

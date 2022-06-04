@@ -26,6 +26,18 @@ body {
   width: 100vw;
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-black);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 3px 0;
+}
+
+a:hover {
+  color: var(--color-destak);
+}
+
 ::-webkit-scrollbar {
   height: 5px;
 }
@@ -432,86 +444,6 @@ span.promo {
   transition: 0.5s;
 }
 
-footer {
-  background-color: var(--grey-border);
-  margin-top: 30px;
-  padding: 30px;
-  font-size: 14px;
-}
-
-footer img {
-  width: 100px;
-}
-
-footer .redes {
-  display: flex;
-  margin: 15px 0 25px;
-}
-
-footer .terms,
-footer .popular {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 25px;
-}
-
-footer a {
-  text-decoration: none;
-  color: black;
-  margin: 3px 0;
-}
-
-footer a:hover {
-  color: var(--color-destak);
-}
-
-.subscribe {
-  padding: 5px 0;
-}
-
-.subscribe input {
-  padding: 5px 10px;
-  border: var(--black-border) 1px solid;
-  outline: none;
-  border-radius: 2px;
-  width: 65%;
-}
-
-.subscribe button {
-  background-color: var(--color-destak);
-  border-radius: 2px;
-  padding: 5px 15px;
-  border: none;
-  color: var(--white);
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.atendimento {
-  margin-top: 25px;
-}
-
-.atendimento li {
-  border-bottom: 1px rgba(173, 165, 165, 0.773) solid;
-  padding: 8px 0;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer {
-  background-color: var(--white);
-  padding: 30px 0 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer img {
-  width: 70%;
-}
-
 @media (min-width: 530px) {
   section.capa {
     display: flex;
@@ -600,10 +532,6 @@ footer a:hover {
   .content-img {
     height: 250px;
   }
-
-  .footer img {
-    width: 300px;
-  }
 }
 
 @media (min-width: 780px) {
@@ -681,20 +609,6 @@ footer a:hover {
   .content-img {
     height: 225px;
   }
-
-  footer {
-    display: flex;
-    gap: 30px;
-    justify-content: space-around;
-  }
-
-  .newsletter input {
-    width: 63%;
-  }
-
-  .footer {
-    padding: 30px 0;
-  }
 }
 
 @media (min-width: 1050px) {
@@ -761,16 +675,5 @@ footer a:hover {
     height: 60px;
     width: 60px;
     font-size: 20px;
-  }
-
-  footer {
-    justify-content: center;
-  }
-
-  footer .content {
-    display: flex;
-    justify-content: space-around;
-    gap: 35px;
-    width: 500px;
   }
 }
